@@ -16,7 +16,7 @@ public class LivroService {
 
 	@Autowired
 	private LivroRepository repository;
-	
+
 	@Autowired
 	private CategoriaService categoriaService;
 
@@ -28,10 +28,10 @@ public class LivroService {
 	}
 
 	public List<Livro> findAll(Integer id_cat) {
-		
+
 		categoriaService.findById(id_cat);
 		return repository.findAllByCategoria(id_cat);
-		
+
 	}
 
 	public Livro update(Integer id, Livro obj) {
@@ -51,6 +51,11 @@ public class LivroService {
 		Categoria cat = categoriaService.findById(id_cat);
 		obj.setCategoria(cat);
 		return repository.save(obj);
+	}
+
+	public void delete(Integer id) {
+		Livro obj = findById(id);
+		repository.delete(obj);
 	}
 
 }
