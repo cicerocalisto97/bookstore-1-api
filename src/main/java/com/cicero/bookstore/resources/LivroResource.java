@@ -27,7 +27,7 @@ import com.cicero.bookstore.service.LivroService;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins="*")
 @RequestMapping(value = "/livros")
 public class LivroResource {
 
