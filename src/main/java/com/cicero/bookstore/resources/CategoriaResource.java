@@ -25,7 +25,7 @@ import com.cicero.bookstore.service.CategoriaService;
 
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins = "*", allowedHeaders = "*") 
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
 
