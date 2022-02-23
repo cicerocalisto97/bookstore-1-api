@@ -23,9 +23,8 @@ import com.cicero.bookstore.domain.Categoria;
 import com.cicero.bookstore.dtos.CategoriaDTO;
 import com.cicero.bookstore.service.CategoriaService;
 
-
+@CrossOrigin("*") 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*") 
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
 
